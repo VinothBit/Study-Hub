@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunal Videos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5907b4, #c99cfb);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: #5907b4;
+      color: white;
+      padding: 18px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-container {
+      padding-top: 100px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 960px;
+      padding: 0 20px;
+    }
+
+    .nav-card {
+      background: linear-gradient(135deg, #ffffff, #f4e9ff);
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      height: 100px;
+      color: #5907b4;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .nav-card i {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .nav-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: linear-gradient(135deg, #c99cfb, #ffffff);
+      color: #3b056d;
+      border-color: #c99cfb;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-section {
+      width: 100%;
+      max-width: 960px;
+      padding: 0 20px;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      height: 495px;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .video-section iframe:hover {
+      transform: scale(1.01);
+    }
+
+    @media (max-width: 600px) {
+      .video-section iframe {
+        height: 240px;
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.transform = 'translateY(-100%)';
+      } else {
+        navbar.style.transform = 'translateY(0)';
+      }
+    });
+
+    function loadVideo(url) {
+      document.getElementById('videoFrame').src = url;
+    }
+  </script>
+</head>
+<body>
+
+  <div class="navbar">🎥 Kunal's Java Video Library</div>
+
+  <div class="main-container">
+    <div class="section-title">📂 Topics Playlist</div>
+
+    <div class="card-buttons">
+      <div class="nav-card" onclick="loadVideo('https://www.youtube.com/embed/videoseries?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ')">
+        <i class="fas fa-list"></i>
+        <span>All Videos</span>
+      </div>
+      <div class="nav-card" onclick="loadVideo('https://www.youtube.com/embed/BSVKUk58K6U')">
+        <i class="fas fa-cube"></i>
+        <span>OOPs</span>
+      </div>
+      <div class="nav-card" onclick="loadVideo('https://www.youtube.com/embed/videoseries?list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod')">
+        <i class="fas fa-redo"></i>
+        <span>Recursion</span>
+      </div>
+    </div>
+
+    <div class="section-title">▶️ Watch Selected Video</div>
+
+    <div class="video-section">
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Resources</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5907b4, #c99cfb);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #5907b4;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      animation: slideDown 1s ease forwards;
+      letter-spacing: 1px;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .main-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .nav-card {
+      background: linear-gradient(135deg, #ffffff, #f4e9ff);
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      height: 110px;
+      color: #5907b4;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .nav-card i {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: #5907b4;
+    }
+
+    .nav-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      background: linear-gradient(135deg, #c99cfb, #ffffff);
+      color: #3b056d;
+      border-color: #c99cfb;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-card:hover i {
+      color: #3b056d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #5907b4;
+      color: #ddd;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">Coding Resources</div>
+
+  <div class="main-container">
+    <div class="grid-container">
+
+      <div class="nav-card" onclick="window.open('https://leetcode.com/problemset/', '_blank')">
+        <i class="fas fa-code"></i>
+        <span>LeetCode</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://www.hackerrank.com/', '_blank')">
+        <i class="fas fa-laptop-code"></i>
+        <span>HackerRank</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://www.hackerearth.com/', '_blank')">
+        <i class="fas fa-brain"></i>
+        <span>HackerEarth</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://www.codechef.com/', '_blank')">
+        <i class="fas fa-utensils"></i>
+        <span>CodeChef</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://codeforces.com/', '_blank')">
+        <i class="fas fa-bolt"></i>
+        <span>Codeforces</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://docs.google.com/spreadsheets/d/1P3RXgZju_2OzZyJaRtu6D3Kx-Eks38X09_zJ8aj2zy8/edit?gid=0#gid=0', '_blank')">
+        <i class="fas fa-table"></i>
+        <span>Practice Sheet</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://leetcode.com/problem-list/2epudx51/', '_blank')">
+        <i class="fas fa-list-check"></i>
+        <span>ProductFit L1</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('http://leetcode.com/problem-list/2epbme92/', '_blank')">
+        <i class="fas fa-list-ol"></i>
+        <span>ProductFit L2</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://leetcode.com/studyplan/top-interview-150/', '_blank')">
+        <i class="fas fa-star"></i>
+        <span>Top 150</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/', '_blank')">
+        <i class="fas fa-sitemap"></i>
+        <span>Striver A2Z</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/', '_blank')">
+        <i class="fas fa-layer-group"></i>
+        <span>Array GFG</span>
+      </div>
+
+      <div class="nav-card" onclick="window.open('https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/', '_blank')">
+        <i class="fas fa-font"></i>
+        <span>String GFG</span>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Study Hub | Keep Coding 💻</footer>
+
+</body>
+</html>

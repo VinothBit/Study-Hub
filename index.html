@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5907b4, #c99cfb);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #5907b4;
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      animation: slideDown 1s ease forwards;
+      letter-spacing: 1px;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .main-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header-text {
+      font-size: 24px;
+      margin-bottom: 40px;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 260px; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .nav-card {
+      background: linear-gradient(135deg, #ffffff, #f4e9ff);
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      height: 110px;
+      color: #5907b4;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .nav-card i {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #5907b4;
+    }
+
+    .nav-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      background: linear-gradient(135deg, #c99cfb, #ffffff);
+      color: #3b056d;
+      border-color: #c99cfb;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-card:hover i {
+      color: #3b056d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #5907b4;
+      color: #ddd;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">Study Hub</div>
+
+  <div class="main-container">
+
+    <div class="grid-container">
+      <div class="nav-card" onclick="location.href='aptitude.html'">
+        <i class="fas fa-brain"></i>
+        <span>Aptitude</span>
+      </div>
+      <div class="nav-card" onclick="window.open('https://wiki.bitsathy.ac.in/')">
+        <i class="fas fa-book"></i>
+        <span>Academics</span>
+      </div>
+      <div class="nav-card" onclick="location.href='coding.html'">
+        <i class="fas fa-code"></i>
+        <span>Coding</span>
+      </div>
+      <div class="nav-card" onclick="location.href='bitWebs.html'">
+        <i class="fas fa-globe"></i>
+        <span>BIT webs</span>
+      </div>
+      <div class="nav-card" onclick="location.href='kunalVideos.html'">
+        <i class="fab fa-youtube"></i>
+        <span>Kunal Java</span>
+      </div>
+      <div class="nav-card" onclick="location.href='comfun.html'">
+        <i class="fas fa-cubes"></i>
+        <span>Fundamentals</span>
+      </div>
+      <div class="nav-card" onclick="window.open('https://www.programiz.com/java-programming/online-compiler/')">
+        <i class="fas fa-terminal"></i>
+        <span>Compiler</span>
+      </div>
+      <div class="nav-card" onclick="window.open('https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox', '_blank')">
+        <i class="fas fa-envelope"></i>
+        <span>Gmail</span>
+      </div>
+      <div class="nav-card" onclick="window.open('https://chatgpt.com/', '_blank')">
+        <i class="fas fa-robot"></i>
+        <span>ChatGPT</span>
+      </div>
+      <div class="nav-card" onclick="window.open('https://youtube.com/', '_blank')">
+        <i class="fab fa-youtube"></i>
+        <span>Youtube</span>
+      </div>
+      <div class="nav-card" onclick="window.open('https://www.linkedin.com/feed/', '_blank')">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Study Hub | Built with ❤️ and Focus</footer>
+</body>
+</html>

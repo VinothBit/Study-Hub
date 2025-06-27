@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Fundamentals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5907b4, #c99cfb);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #5907b4;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      animation: slideDown 0.7s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      padding: 120px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-card {
+      background: linear-gradient(135deg, #ffffff, #f4e9ff);
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      height: 110px;
+      color: #5907b4;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .nav-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      background: linear-gradient(135deg, #c99cfb, #ffffff);
+      color: #3b056d;
+      border-color: #c99cfb;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #5907b4;
+      color: #ddd;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 500px) {
+      .nav-card {
+        height: 100px;
+        font-size: 14px;
+      }
+
+      .navbar {
+        font-size: 22px;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">Computer Fundamentals</div>
+
+  <div class="main-container">
+    <div class="nav-card" onclick="window.open('https://www.scaler.com/topics/computer-network/', '_blank')">
+      <i class="fas fa-network-wired" style="margin-right: 8px;"></i>
+      Computer Networks
+    </div>
+    <div class="nav-card" onclick="window.open('https://www.khanacademy.org/computing/ap-computer-science-principles/computers-101', '_blank')">
+      <i class="fas fa-desktop" style="margin-right: 8px;"></i>
+      Computer Fundamentals
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Study Hub | Powered by Learning 💡</footer>
+
+</body>
+</html>

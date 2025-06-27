@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5907b4, #c99cfb);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #5907b4;
+      padding: 18px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      animation: slideDown 0.8s ease forwards;
+      letter-spacing: 1px;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .course {
+      background: linear-gradient(135deg, #ffffff, #f4e9ff);
+      color: #5907b4;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+      transition: all 0.3s ease;
+    }
+
+    .course:hover {
+      transform: scale(1.02);
+      background: linear-gradient(135deg, #c99cfb, #ffffff);
+      color: #3b056d;
+    }
+
+    .course-title {
+      font-weight: 600;
+      font-size: 16px;
+      max-width: 70%;
+    }
+
+    .btns button {
+      margin-left: 10px;
+      padding: 8px 14px;
+      background-color: #5907b4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btns button:hover {
+      background-color: #3b056d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #5907b4;
+      color: #ddd;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">📘 Academics</div>
+
+  <div class="section">
+    <div class="course">
+      <span class="course-title">22CD601 FOUNDATIONS OF ARTIFICIAL INTELLIGENCE</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD601_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/1Eoui7fdi76v4Fa0i4GjGLo5QC2f1wL5i?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+
+    <div class="course">
+      <span class="course-title">22CD602 PRINCIPLES OF COMPILER DESIGN</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD602_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/1ktIL1wbUZQwOiWz4HCXd9sC5_7Ke24iA?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+
+    <div class="course">
+      <span class="course-title">22CD603 HUMAN COMPUTER INTERACTION</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD603_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/1XldxdvtcR0rOgpakWgU-3unPBTlZBvUw?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+
+    <div class="course">
+      <span class="course-title">22CD028 MARKETING RESEARCH AND MARKETING MANAGEMENT</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD028_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/14Ia4GI3sXlwyBTCtYRn7rveuIs0T3cWc?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+
+    <div class="course">
+      <span class="course-title">22CD003 BIG DATA ANALYTICS</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD003_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/16oQOfCNfbx7SFskD2_6I99D2sbea60oh?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+
+    <div class="course">
+      <span class="course-title">22CD019 MULTIMEDIA AND ANIMATION</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD019_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/11sWtAUqBoux4uGAbzeCrwW-ErX8Vxfgu?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+
+    <div class="course">
+      <span class="course-title">22CD023 DIGITAL MARKETING</span>
+      <div class="btns">
+        <button onclick="window.open('https://wiki.bitsathy.ac.in/wiki/CSD:22CD023_24-25#Lesson_Plan_and_Schedule')">Wiki</button>
+        <button onclick="window.open('https://drive.google.com/drive/folders/1gEi8GsRbkFCyngKfGrQIvPTL7Tx7x0I6?usp=drive_link')">Notes</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Study Hub | Academics Powered by 📘 & Focus</footer>
+</body>
+</html>

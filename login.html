@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Study Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5907b4, #c99cfb);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .login-box {
+      background: #ffffff;
+      color: #5907b4;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .login-box h2 {
+      margin-bottom: 30px;
+      font-size: 26px;
+      color: #3b056d;
+    }
+
+    .login-box input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #c99cfb;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+      color: #5907b4;
+    }
+
+    .login-box input::placeholder {
+      color: #999;
+    }
+
+    .login-box button {
+      background: #5907b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background: #c99cfb;
+      color: #3b056d;
+      transform: scale(1.05);
+    }
+
+    .login-box .icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #c99cfb;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <div class="icon"><i class="fas fa-lock"></i></div>
+    <h2>Enter Password to Continue</h2>
+    <input type="password" id="pwd" placeholder="Password..." />
+    <br>
+    <button onclick="check()">Login</button>
+  </div>
+
+  <footer>&copy; 2025 Study Hub | Secure & Smooth 🚀</footer>
+
+  <script>
+    function check() {
+      const correctPassword = "Project001"; // Change this to your password
+      const input = document.getElementById("pwd").value;
+
+      if (input === correctPassword) {
+        window.location.href = "home.html"; // Redirect after correct login
+      } else {
+        alert("Wrong password! Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
