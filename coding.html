@@ -132,10 +132,18 @@
         <span>CodeChef</span>
       </div>
 
-      <div class="nav-card" onclick="window.open('https://codeforces.com/', '_blank')">
-        <i class="fas fa-bolt"></i>
-        <span>Codeforces</span>
-      </div>
+      <div class="nav-card" onclick="openLinks()">
+  <i class="fas fa-bolt"></i>
+  <span>Codeforces</span>
+</div>
+
+<script>
+  function openLinks() {
+    window.open("https://codeforces.com/", "_blank"); 
+    window.open("https://www.tle-eliminators.com/cp-sheet", "_blank");   
+  }
+</script>
+
 
       <div class="nav-card" onclick="window.open('https://docs.google.com/spreadsheets/d/1P3RXgZju_2OzZyJaRtu6D3Kx-Eks38X09_zJ8aj2zy8/edit?gid=0#gid=0', '_blank')">
         <i class="fas fa-table"></i>
